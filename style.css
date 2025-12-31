@@ -1,0 +1,125 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY: black side bars */
+body {
+  background-color: black;            /* black sides */
+  display: flex;
+  justify-content: center;            /* center content horizontally */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* PAGE CONTAINER: white main content */
+.page-container {
+  background-color: white;
+  max-width: 1700px;                  /* fixed width for content */
+  width: 95%;
+  margin: 0 auto; /* responsive on smaller screens */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* full height for vertical centering */
+}
+
+/* TOP BAR */
+.top-bar {
+  padding: 20px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;         /* top-right */
+  align-items: center;
+  width: 100%;
+}
+
+/* TOP-RIGHT LINKS */
+.top-right a {
+  margin-left: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: blue;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.top-right a:hover {
+  background-color: #007bff;
+  color: white;
+  text-decoration: underline;
+}
+
+/* HERO / CENTER CONTENT */
+.hero {
+  flex: 1;                             /* fill remaining height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;             /* vertical center */
+  align-items: center;                 /* horizontal center */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* ABOUT TEXT */
+.about-text {
+  max-width: 700px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* PARAGRAPH */
+.info {
+  max-width: 600px;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.center-box {
+  display: flex;
+  gap: 30px;
+}
+
+.center-box a {
+  font-weight: bold;
+  text-decoration: none;
+  color: blue;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.center-box a:hover {
+  color: white;
+  background-color: #007bff;
+  text-decoration: underline;
+}
+
+/* MEDIA QUERY FOR MOBILE (optional tweaks) */
+@media (max-width: 768px) {
+  .center-box {
+    flex-direction: column;           /* stack buttons vertically */
+    gap: 15px;
+  }
+
+  .top-right {
+    position: static;                 /* stay in flow */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    font-size: 0.95rem;
+  }
+}
